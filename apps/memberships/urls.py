@@ -1,6 +1,5 @@
-from django.urls import path
-from . import views
-urlpatterns = [
-    path('memberships/', views.memberships, name='memberships'),
-
-]
+from rest_framework.routers import DefaultRouter
+from .views import MembershipViewSet
+router = DefaultRouter()
+router.register('', MembershipViewSet, basename='memberships')
+urlpatterns = router.urls
