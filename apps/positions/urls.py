@@ -1,6 +1,6 @@
-from django.urls import path
-from . import views
-urlpatterns = [
-    path('positions/', views.positions, name='positions'),
+from rest_framework.routers import DefaultRouter
+from .views import PositionsViewSet
 
-]
+router = DefaultRouter()
+router.register("positions", PositionsViewSet, basename="positions")
+urlpatterns = router.urls
