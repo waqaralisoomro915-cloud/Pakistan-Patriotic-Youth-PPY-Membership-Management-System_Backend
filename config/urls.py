@@ -24,7 +24,7 @@ urlpatterns = [
     path('', include('apps.cards.urls')),
     path('', include('apps.common.urls')),
     path('', include('apps.memberships.urls')),
-    path('', include('apps.organizations.urls')),
+    path('api/positions/', include('apps.positions.urls')),
     path('', include('apps.promotions.urls')),
     path('', include('apps.verification.urls')),
 ]
