@@ -1,5 +1,6 @@
-from django.urls import path
-from . import views
-urlpatterns = [
-    path('verification/', views.verification, name='verification'),
-]
+from rest_framework.routers import DefaultRouter
+from .views import VerificationViewSet
+
+router = DefaultRouter()
+router.register('', VerificationViewSet, basename='verification')
+urlpatterns = router.urls

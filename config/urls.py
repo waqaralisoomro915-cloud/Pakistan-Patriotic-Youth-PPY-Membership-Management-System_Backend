@@ -11,6 +11,6 @@ urlpatterns = [
     path('api/memberships/', include('apps.memberships.urls')),
     path('api/positions/', include('apps.positions.urls')),
     path('api/promotions/', include('apps.promotions.urls')),
-    path('', include('apps.verification.urls')),
+    path('api/verification/', include('apps.verification.urls')),
     path('', include('apps.audit.urls')),
 ]
