@@ -1,5 +1,5 @@
-from django.urls import path
-from . import views
-urlpatterns = [
-    path('promotions/', views.promotions, name='promotions'),
-]
+from rest_framework.routers import DefaultRouter
+from .views import PromotionViewSet
+router = DefaultRouter()
+router.register('', PromotionViewSet, basename='promotions')
+urlpatterns = router.urls
