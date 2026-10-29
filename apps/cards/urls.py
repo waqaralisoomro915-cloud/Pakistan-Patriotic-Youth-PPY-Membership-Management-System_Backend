@@ -1,5 +1,5 @@
-from django.urls import path
-from . import views
-urlpatterns = [
-    path('cards/',views.cards,name='cards'),
-]
+from rest_framework.routers import DefaultRouter
+from .views import CardViewSet
+router = DefaultRouter()
+router.register('', CardViewSet,basename='cards')
+urlpatterns = router.urls
